@@ -1,8 +1,9 @@
 package com.example.android.practiceset2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+//import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -10,5 +11,58 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // PASTE CODE YOU WANT TO TEST HERE
+
+        //code for Sleep debt
+//        int weekday = 5;
+//        int weekend = 9;
+//        int optimalHours = 7 * 8;
+//
+//        int actualHours = weekday * 5 + weekend * 2;
+//        int solution = optimalHours - actualHours;
+//        display(solution);
+
+        //code for Travel times
+//        int day1 = 15;
+//        int day2 = 22;
+//        int day3 = 18;
+//        int totalTime = day1 + day2 + day3;
+//
+//        display(totalTime / 3);
+
+        //currency conversion
+        int dollars = 40;
+        int dollarsToYen = 119;
+        int yen = dollarsToYen * dollars;
+        display(yen);
+    }
+
+    /**
+     * Display methods that allow the text to appear on the screen. Don't worry if you don't know
+     * how these work yet. We'll be covering them in lesson 3.
+     */
+
+    public void display(String text) {
+        TextView t = (TextView) findViewById(R.id.display_text_view);
+        t.setText(text);
+    }
+
+    public void display(int text) {
+        TextView t = (TextView) findViewById(R.id.display_text_view);
+        t.setText(text + "");
+    }
+
+    public void display1(String text) {
+        display(text);
+    }
+
+    public void display2(String text) {
+        TextView t = (TextView) findViewById(R.id.display_text_view_2);
+        t.setText(text);
+    }
+
+    public void display3(String text) {
+        TextView t = (TextView) findViewById(R.id.display_text_view_3);
+        t.setText(text);
     }
 }
